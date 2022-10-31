@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!--header-->
+    <section class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <!--card-->
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+          <p>Please enter password length (minimum 8 maximum 128) </p>
+        </div>
+        <!--input number-->
+        <ul class="password-option-items">
+          <div class="password-option-item">
+            <label for="password-length-inp">Length</label>
+            <input type="number" class="password-length-inp" id="password-length-inp" min="8" max="128" value="8">
+          </div>
+          <!--checkbox input 4-->
+          <!--1-->
+          <div class="password-option-item">
+            <input type="checkbox" class="contains-lowercase-inp"  id="contains-lowercase-inp">
+            <label for="contains-lowercase-inp">Lowercase letters</label>
+          </div>
+          <!--2-->
+          <div class="password-option-item">
+            <input type="checkbox" class="contains-uppercase-inp" id="contains-uppercase-inp">
+            <label for="contains-uppercase-inp">Uppercase letters</label>
+          </div>
+          <!--3-->
+          <div class="password-option-item">
+            <input type="checkbox" class="contains-special-chars-inp" id="contains-special-chars-inp">
+            <label for="contains-special-chars-inp">Special Characters</label>
+          </div>
+          <!--4-->
+          <div class="password-option-item">
+            <input type="checkbox" class="contains-digits-inp" id="contains-digits-inp">
+            <label for="contains-digits-inp">Digits</label>
+          </div>
+        </ul>
+        <!--section textarea-->
+        <section class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+          <!--button-->
+        </section>
+        <section class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </section>
+      </div>
+    </section>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
