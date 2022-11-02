@@ -24,6 +24,12 @@ var containsUppercaseInp = document.querySelector('#contains-uppercase-inp');
 var containsSpecialCharsInp = document.querySelector('#contains-special-chars-inp');
 var containsDigitsInp = document.querySelector('#contains-digits-inp');
 
+function validatePasswordLength(e) {
+  if(e.target.value < 8) e.target.value = 8;
+  else if(e.target.value > 128) e.target.value = 128;
+}
+
+
 function generatePassword() {
   var passwordLength = Number(passwordLengthInp.value);
   var containsLowercase = containsLowercaseInp.checked;
@@ -104,6 +110,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
+passwordLengthInp.addEventListener('input', validatePasswordLength);
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
